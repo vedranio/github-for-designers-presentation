@@ -7,11 +7,18 @@ import {
   Cite,
   Deck,
   Heading,
+  Image,
   ListItem,
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Table,
+  TableHeader,
+  TableRow,
+  TableHeaderItem,
+  TableBody,
+  TableItem
 } from "spectacle";
 
 // Import image preloader util
@@ -47,14 +54,35 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+      <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={1} lineHeight={1} textColor="primary">
+            GitHub
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px 0 0" textColor="tertiary" size={1}>
+            for designers
           </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Git ≠ GitHub</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Git</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">An open source program for tracking changes in text files.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">Alternatives to Git include SVN, CVS and Mercurial.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">GitHub</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A social user interface built on top of Git. It provides a web interface and a desktop client.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">Alternatives to GitHub include BitBucket, SourceTree and Tortoise.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Repositories</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Repository</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Think of it as a project folder containing all your files and most importantly, their version history.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">A repository can have multiple collaborators.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>

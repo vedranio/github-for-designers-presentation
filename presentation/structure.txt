@@ -1,0 +1,52 @@
+What is GitHub (git ≠ GitHub)
+
+Git and GitHub alternatives
+  Systems: CVS, SVN, Mercurial, Git
+  Desktop clients: Tortoise, SourceTree, GitHub
+  Platforms: GitHub, BitBucket
+
+Terminology
+  Repository (repo)
+  Local repo (client)
+  Remote repo (server)
+  Branch
+  Fork
+  Master
+  Add
+  Commit
+  Checkout
+  Clone
+  Push
+  Pull
+  Sync (update)
+  Pull request
+
+
+Getting started ()
+  creating a GitHub account
+  installing Git
+  command line or client?
+
+Workflows
+  1. create a repo (online)
+  2. clone a repo (SSH)
+  3. run git status
+  4. make some changes
+  5. run git status
+  6. git add
+  7. git commit
+  8. git push origin master
+  - branching
+  9. create a branch
+  10. add a file (add, commit, push origin <branch>)
+  11. have a look at the branch on GitHub and show that it can be merged
+  - pull request
+  12. merge the branch into master by creating a pull request
+  13. git checkout master to switch to master
+  14. git pull to update master from remote repo
+  15. git branch -d <branch> to delete the feature branch localy
+  16. git push origin :<branch>
+  - resolving conflicts
+  17. create another branch
+  18. make a change and commit it
+  19. switch back to master and edit the same file. Then push it
