@@ -5,6 +5,7 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   Image,
@@ -48,7 +49,7 @@ const theme = createTheme({
   quartenary: "#CECECE"
 }, {
   primary: "Montserrat",
-  secondary: "Helvetica"
+  secondary: "Didot"
 });
 
 export default class Presentation extends React.Component {
@@ -59,7 +60,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} lineHeight={1} textColor="primary">
             GitHub
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1}>
+          <Text italic textFont="secondary" margin="10px 0 0" textColor="tertiary" size={1}>
             for designers
           </Text>
         </Slide>
@@ -80,32 +81,105 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="secondary">Repositories</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Repository</Text>
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Repository (repo)</Text>
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Think of it as a project folder containing all your files and most importantly, their version history.</Text>
           <Text textAlign="left" size={6} textColor="secondary">A repository can have multiple collaborators.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Remote repo</Text>
+          <Text textAlign="left" size={6} textColor="secondary">The version of your files hosted on a remote server, eg. GitHub.com.</Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Local repo (clone)</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A copy of a remote repo stored localy on your computer.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">You edit the files in your local repo. As it is connected to the remote version, you can keep the two in sync.</Text>
         </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Branches</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Master</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Master branch is the primary branch each repo is initiated with. This is your "live" version.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">Every repo has at least one branch – the master branch.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Branch</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A parallel version of a repo. It is contained within the repo, but it does not affect the master branch.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">You can create any number of branches, make changes in them and merge them into the master once you are ready to publish your changes.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Fork</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A personal copy of another users repository. Forks are connected to the orignal repo, but are not contained within it.</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">You can make changes to your fork and submit a pull request to the original author to have your changes included.</Text>
+          <Text textAlign="left" size={6} textColor="secondary">You can also keep your fork up to date by pulling updates from the original.</Text>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Actions</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Clone</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Make a local copy of a remote repo.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git clone [repo-name]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Create a branch</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Create a local branch, and switch to it so you can make changes.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git checkout -b [branch-name]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Stage your changes</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">After making changes, add them to 'staging' before you can commit them.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git add [file(s)]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Commit</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Commit staged changes to your local repo.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git commit -m "change description"</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Fetch</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Fetch the latest changes from the remote repo, so you can review them alongside yours.</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">It is good practice to fetch before you try to merge your changes.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git fetch [repo-name]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Merge</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Once you have the remote changes on your computer, you can merge them with your changes.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git merge [branch-name]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Pull</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Pull is an alternative workflow to fetch and merge.</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">pull = fetch + merge</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git pull [branch-name]</Code></Text>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Getting started</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">1. Create an account on GitHub.com</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">2. Install Git</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">3. Choose command line or desktop client</Text>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Practical example</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">1. Set up a repo</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">2. Make some changes</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">3. Create a branch</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">4. Create pull request</Text>
+          <Text margin="0 0 20px 0" textAlign="left" size={6} textColor="secondary">5. Resolve conflicts</Text>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Software development with git is hard. Without it, it's unimaginable.</Quote>
+            <Cite>Software developer</Cite>
           </BlockQuote>
         </Slide>
       </Deck>

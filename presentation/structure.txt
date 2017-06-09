@@ -9,9 +9,11 @@ Terminology
   Repository (repo)
   Local repo (client)
   Remote repo (server)
+
   Branch
   Fork
   Master
+
   Add
   Commit
   Checkout
@@ -28,9 +30,11 @@ Getting started ()
   command line or client?
 
 Workflows
+  - set up
   1. create a repo (online)
-  2. clone a repo (SSH)
+  2. clone a repo (SSH) and client
   3. run git status
+  - make changes
   4. make some changes
   5. run git status
   6. git add
