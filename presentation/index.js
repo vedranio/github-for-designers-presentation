@@ -179,7 +179,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Software development with git is hard. Without it, it's unimaginable.</Quote>
-            <Cite>Software developer</Cite>
+            <Cite italic textFont="secondary">Software developer</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
