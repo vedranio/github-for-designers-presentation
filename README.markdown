@@ -5,7 +5,7 @@ Initially presented to the SEEK design team on 19 July 2017
 
 ## Reference
 
-this presentation is built using  [FormidableLabs' Spectacle, a ReactJS based Presentation Library](https://github.com/FormidableLabs/spectacle).
+This presentation is built using  [FormidableLabs' Spectacle](https://github.com/FormidableLabs/spectacle), a ReactJS based Presentation Library.
 
 ## Making changes and running
 
@@ -15,6 +15,8 @@ To run the presentation:
 1. `npm install`
 2. `npm start`
 3. Open a browser and hit [http://localhost:3000](http://localhost:3000)
+
+The only file that needs changing is `/presentation/index.js`
 
 ## Build & Deployment
 
