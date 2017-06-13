@@ -1,18 +1,20 @@
-# Spectacle Boilerplate
+# GitHub for designers
+
+My presentation for introducing Git and GiHub basics to designers.
+Initially presented to the SEEK design team on 19 July 2017
 
 ## Reference
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+this presentation is built using  [FormidableLabs' Spectacle, a ReactJS based Presentation Library](https://github.com/FormidableLabs/spectacle).
 
-## Development
+## Making changes and running
 
-After downloading the boilerplate, your first order of business is to open terminal and run `yarn`. (or `npm install` if you're about that life)
+I created the presentation by downloading the [Spectacle Boilerplate](https://github.com/FormidableLabs/spectacle-boilerplate/)
 
-Next, run `rm -R .git` to remove the existing version control.
-
-Then, to start up the local server, run `npm start`
-
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
+To run the presentation:
+1. `npm install`
+2. `npm start`
+3. Open a browser and hit [http://localhost:3000](http://localhost:3000)
 
 ## Build & Deployment
 
