@@ -33,7 +33,7 @@ Workflows
   - set up
   1. create a repo (online)
   2. clone a repo (SSH) and client
-  3. run git status
+  3. run git status and git branch
   - make changes
   4. make some changes
   5. run git status
@@ -41,7 +41,7 @@ Workflows
   7. git commit
   8. git push origin master
   - branching
-  9. create a branch
+  9. create a branch (git checkout -b <branch>)
   10. add a file (add, commit, push origin <branch>)
   11. have a look at the branch on GitHub and show that it can be merged
   - pull request
@@ -54,3 +54,5 @@ Workflows
   17. create another branch
   18. make a change and commit it
   19. switch back to master and edit the same file. Then push it
+  20. pull request on GitHub
+  21. merge on the command line but show how it can be done online too
