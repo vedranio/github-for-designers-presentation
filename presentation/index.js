@@ -104,15 +104,24 @@ export default class Presentation extends React.Component {
           <Text textAlign="left" size={6} textColor="secondary">Every repo has at least one branch – the master branch.</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
+          <Image src={require("../assets/simple-repo.png")}></Image>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
           <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Branch</Text>
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A parallel version of a repo. It is contained within the repo, but it does not affect the master branch.</Text>
           <Text textAlign="left" size={6} textColor="secondary">You can create any number of branches, make changes in them and merge them into the master once you are ready to publish your changes.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Image src={require("../assets/branch.png")}></Image>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Fork</Text>
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">A personal copy of another users repository. Forks are connected to the orignal repo, but are not contained within it.</Text>
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">You can make changes to your fork and submit a pull request to the original author to have your changes included.</Text>
           <Text textAlign="left" size={6} textColor="secondary">You can also keep your fork up to date by pulling updates from the original.</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Image src={require("../assets/fork.png")}></Image>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -154,6 +163,11 @@ export default class Presentation extends React.Component {
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Pull is an alternative workflow to fetch and merge.</Text>
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">pull = fetch + merge</Text>
           <Text textAlign="left" size={6} textColor="secondary"><Code>git pull [branch-name]</Code></Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Push</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Push your changes to the remote repo.</Text>
+          <Text textAlign="left" size={6} textColor="secondary"><Code>git push origin [branch-name]</Code></Text>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
