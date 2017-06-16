@@ -58,7 +58,7 @@ export default class Presentation extends React.Component {
       <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
         <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={1} lineHeight={1} textColor="primary">
-            GitHub
+            Git(Hub)
           </Heading>
           <Text italic textFont="secondary" margin="10px 0 0" textColor="tertiary" size={1}>
             for designers

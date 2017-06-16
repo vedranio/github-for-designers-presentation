@@ -48,7 +48,7 @@ Workflows
   12. merge the branch into master by creating a pull request
   13. git checkout master to switch to master
   14. git pull to update master from remote repo
-  15. git branch -d <branch> to delete the feature branch localy
+  15. git branch -d <branch> to delete the feature branch locally
   16. git push origin :<branch>
   - resolving conflicts
   17. create another branch
