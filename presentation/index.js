@@ -169,6 +169,10 @@ export default class Presentation extends React.Component {
           <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">Push your changes to the remote repo.</Text>
           <Text textAlign="left" size={6} textColor="secondary"><Code>git push origin [branch-name]</Code></Text>
         </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Text margin="0 0 20px 0" bold textAlign="left" size={6} textColor="secondary">Pull request</Text>
+          <Text margin="0 0 40px 0" textAlign="left" size={6} textColor="secondary">When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch.</Text>
+        </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={1} textColor="secondary">Getting started</Heading>
